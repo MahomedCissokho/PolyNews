@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ActuNet</title>
+    <link rel="stylesheet" href="page.css">
 </head>
 
 <body>
@@ -65,7 +66,7 @@ while ($category = $categoriesArray->fetch_row()) {
         for (let index = 0; index < dataCategories.length; index++) {
             const element = dataCategories[index];
             console.log(element.id);
-            const item = document.createElement("button")
+            const item = document.createElement("li")
             item.setAttribute("class", "item")
             const listContent = document.getElementById("list-item");
             item.textContent = element.libelle
