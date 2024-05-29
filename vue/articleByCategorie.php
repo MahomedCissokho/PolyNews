@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>Articles par Catégorie</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
     <?php require_once 'inc/entete.php'; ?>
     <div id="contenu">
-        <?php if (!empty($categories)) : ?>
-            <ul>
+    <ul>
+            <li><a href="index.php?action=accueil">Accueil</a></li>
+            <?php if (!empty($categories)) : ?>
                 <?php foreach ($categories as $categorie) : ?>
                     <li><a href="index.php?action=categorie&id=<?= $categorie->id ?>"><?= $categorie->libelle ?></a></li>
                 <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
+            <?php endif; ?>
+        </ul>
         <?php if (!empty($articles)) : ?>
             <?php foreach ($articles as $article) : ?>
                 <div class="article">

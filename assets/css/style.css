@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Questrial&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+/* Styles de base */
+body {
+    background-color: #1a1a1a; /* bg-neutral-900 */
+    color: #f1f1f1;
+    font-family: 'Questrial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #f1f1f1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #f1f1f1;
+}
+
+/* Contenu principal */
+#contenu {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Titre principal */
+#contenu h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e90ff; /* Couleur bleu dodger */
+}
+
+/* Articles */
+.article {
+    border: 2px solid #f1f1f1;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    border-color: #1e90ff; /* Couleur bleu dodger pour l'effet de survol */
+}
+
+.article h1 {
+    font-size: 1.8em;
+    margin: 0 0 10px 0;
+    color: #87cefa; /* Couleur bleu clair */
+}
+
+.article p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Liens dans les articles */
+.article a {
+    color: #87cefa; /* Couleur bleu clair */
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.article a:hover {
+    color: #1e90ff; /* Couleur bleu dodger pour l'effet de survol */
+    border-bottom: 2px solid #1e90ff;
+}
+
+/* Mon article */
+.monarticle {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+}
+
+.monarticle h1 {
+    font-size: 2em;
+    color: #87cefa; /* Couleur bleu clair */
+    margin-bottom: 10px;
+}
+
+.monarticle p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+/* Menu des catégories */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 15px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+ul li a:hover {
+    color: #1e90ff; /* Couleur bleu dodger pour l'effet de survol */
+    border-bottom: 2px solid #1e90ff;
+}
+
+/* Messages */
+.message {
+    color: #1e90ff;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header, .article, ul, .monarticle {
+    animation: fadeIn 1s ease-in;
+}

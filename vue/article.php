@@ -8,6 +8,14 @@
 <body>
     <?php require_once 'inc/entete.php'; ?>
     <div id="contenu">
+        <ul>
+            <li><a href="index.php?action=accueil">Accueil</a></li>
+            <?php if (!empty($categories)) : ?>
+                <?php foreach ($categories as $categorie) : ?>
+                    <li><a href="index.php?action=categorie&id=<?= $categorie->id ?>"><?= $categorie->libelle ?></a></li>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </ul>
         <?php if (isset($article)) : ?>
                 <div class="monarticle">
                     <h1><?= $article->titre ?></h1>
